@@ -12,6 +12,9 @@
 
   --ff-base: "Inter", sans-serif;
   --ff-accent: "Lexend Deca", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -74,4 +77,86 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--clr-primary-900);
+  color: var(--clr-neutral-150);
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--clr-primary-800);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  margin-bottom: 2.7rem;
+  position: relative;
+}
+
+#cover {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(278, 86%, 46%, 0.507);
+}
+
+.card__content {
+  padding-inline: 2rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.card__title {
+  color: var(--clr-neutral-100);
+  line-height: 1.15;
+  font-size: 1.7rem;
+}
+
+.accent {
+  color: var(--clr-accent);
+}
+
+.card__desc {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: max(2rem, 50px);
+}
+
+.card__stat-item {
+  color: var(--clr-neutral-100);
+}
+
+.card__stat-num {
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+}
+
+.card__stat-heading {
+  font-family: var(--ff-accent);
+  text-transform: uppercase;
+  color: var(--clr-neutral-200);
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
 }
