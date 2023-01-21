@@ -166,7 +166,6 @@ body {
     max-width: 1080px;
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 650px));
-    max-height: min(446px, 1%);
   }
 
   .card__image {
@@ -197,5 +196,11 @@ body {
     justify-content: space-between;
     margin-top: 1rem;
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card {
+    max-height: 446px;
   }
 }
